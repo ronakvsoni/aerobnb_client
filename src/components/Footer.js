@@ -5,7 +5,7 @@ const Footer = prop =>{
   return (
     <div className='footer'>
       <br/>
-    &nbsp;&nbsp;  © 2020 Aerobnb, Inc. All Rights Reserved
+    &nbsp;&nbsp;  © 2020 aerobnb, Inc. All Rights Reserved
       <br/>
     </div>
   )

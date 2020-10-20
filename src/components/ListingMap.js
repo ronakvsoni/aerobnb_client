@@ -24,7 +24,7 @@ class ListingMap extends Component {
         <center>
           <div style={{ height: '80vh', width: '100%' }}>
             <GoogleMapReact
-              bootstrapURLKeys={{ key: `${process.env.REACT_APP_API_KEY}` }}
+              bootstrapURLKeys={{ key: `${process.env.REACT_APP_GOOGLE_API_KEY}` }}
               defaultCenter={center}
               defaultZoom={this.props.zoom}
             >

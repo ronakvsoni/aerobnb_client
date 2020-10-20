@@ -25,7 +25,7 @@ export const addListing = (name, price, address, description, host_id, neighbour
     data.append('avatars[]', avatars[1])
     data.append('avatars[]', avatars[2])
 
-    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.REACT_APP_API_KEY}`)
+    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.REACT_APP_GOOGLE_API_KEY}`)
       .then(res=>res.json())
       .then(res=>{
         lat=res.results[0].geometry.location.lat
@@ -48,7 +48,7 @@ export const addListing = (name, price, address, description, host_id, neighbour
         })
         .then(JSONResponse => dispatch({ type: ADD_LISTING, payload: JSONResponse }))
         .then(()=>dispatch({ type: ADDED_LISTING }))
-        .catch(r => r.json().then(console.log))
+        // .catch(r => r.json().then(console.log))
 
       })
       // .catch(r => r.json().then(console.log))

@@ -4,7 +4,7 @@ const RelativeFooter = prop =>{
   return (
     <div className='relativefooter'>
       <br/>
-    &nbsp;&nbsp;  © 2018 MinorBnb, Inc. All Rights Reserved
+    &nbsp;&nbsp;  © 2020 aeorbnb, Inc. All Rights Reserved
       <br/>
     </div>
   )
