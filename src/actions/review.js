@@ -10,6 +10,7 @@ export const addReview = (rating, description, guest_id, reservation_id) => {
         'Content-Type': 'application/json',
         Accept: 'application/json',
         Authorization: `Bearer ${localStorage.getItem('jwt')}`
+        // "Authorization": Bearer ${localstorage.jwt}
       },
       body: JSON.stringify({
         review: {rating, description, guest_id, reservation_id}

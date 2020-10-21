@@ -2,6 +2,7 @@ import React from 'react'
 import { Feed, Segment } from 'semantic-ui-react'
 
 const Review = props => {
+  console.log(props)
   return (
     <Segment>
       <Feed.Event>
