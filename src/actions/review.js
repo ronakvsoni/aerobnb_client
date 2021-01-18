@@ -25,7 +25,7 @@ export const addReview = (rating, description, guest_id, reservation_id) => {
       })
       .then(JSONResponse => {dispatch({ type: ADD_REVIEW, payload: JSONResponse })})
       .then(()=>dispatch({ type: ADDED_REVIEW}))
-      .catch(r => r.json().then(console.log))
+      // .catch(r => r.json().then(console.log))
 
   }
 }

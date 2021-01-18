@@ -30,7 +30,7 @@ export const addReservation = (check_in, check_out, guest_number, guest_id, list
       .then(()=>{
         setTimeout(() => dispatch({ type: ADDED_RESERVATION }, 2000))
       })
-      .catch(r => r.json().then(console.log))
+      // .catch(r => r.json().then(console.log))
 
   }
 }
