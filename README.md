@@ -1,68 +1,117 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Aerobnb - Client(Frontend)
 
-## Available Scripts
+Aerobnb is an application that vacation rental online marketplace. It maintains and hosts a marketplace, accessible to consumers on this app. Through the service, users can arrange lodging, primarily homestays, and tourism experiences or list their properties for rental.
 
-In the project directory, you can run:
 
-### `npm start`
+[This](https://github.com/ronakvsoni/aerobnb_server) is a link to the Back-end repository.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Motivation
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Nowadays, lots of people investing in a property. So, I wanted to create an app that could encourage Traveling and Hospitality Professionals to get profitable for their unused properties. I had been learning a lot about these topics over the year by seeing other hotels and apartment lease booking website used as examples for how they work, and I wanted to give that ability to any user specifically who want to host their property and who wants to spend some holiday stay at a different destination.
 
-### `npm test`
+## Screenshots
+Home Page
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img src="public/README Screenshots/Homepage.png" width="800">
 
-### `npm run build`
+Create New Account as Sign Up
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img src="public/README Screenshots/Createuser.png" width="800">
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+After Sign Up/Login In, Dashboard shows Plethora of Listings, 
+<br>it can be filtered by different aspects like price, neighborhoods, name of the property, and address</br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img src="public/README Screenshots/Dashboard.png" width="800">
 
-### `npm run eject`
+If Users want to be Host then they can publish their property with Add Listing feature.
+<br>Here, the user act as a Host.</br>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<img src="public/README Screenshots/CreateListing.png" width="800">
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If Users want to be Guest then they can reserve other properties for their holidays with Add Reservation feature.
+<br>Every user has to upload age proof document when they make a reservation so it can be signed by the host afterward.
+<br>
+Here, the user act as a Guest.</br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<img src="public/README Screenshots/Reservation.png" width="800">
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+After Book Reservation Host can see when they login In
+<br> How many reservation hosts received that can be seen in My Reservation 
+<br> The host can Sign users age proof document here.
 
-## Learn More
+<img src="public/README Screenshots/Bookedreservation.png" width="800">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+User can see their Profile in full Details in NavBar Drop-Down Menu.
+<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img src="public/README Screenshots/Userprofile.png" width="800">
 
-### Code Splitting
+After the Visit user can review their trip experience with ratings and comments.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+<img src="public/README Screenshots/Mytrips.png" width="800">
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Technology Used
 
-### Making a Progressive Web App
+- JavaScript
+- Ruby on Rails Backend
+- React Frontend
+- Redux thunk
+- PostgreSQL Database
+- Semantic-UX/UI
+- API(Google-Maps Geocoding)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Features
 
-### Advanced Configuration
+Users Can:
+- Create one account work as both Host and Guest
+- Location of posting in Google-Maps with exact pin marker 
+- Multi-purpose search built from scratch
+- JWT Authentication
+- Drag and Drop for better UX
+- Carousel with React-Slick (implemented at listings Dashboard and listing detail)
+- Single & multiple images (s) upload with carrierwave gem 
+- PDF file upload and download with carrierwave gem 
+- date pick with react-date
+- reservation form only show for guests, not the host
+- infinite scroll built from scratch
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## Installation
 
-### `npm run build` fails to minify
+Clone the front-end repository
+<br>run 'atom .' or open in other editors like VS code, create an .env file at the project root folder.</br>
+inside '.env' file, create 2 environment variables and set it to your own backend endpoint and google API key
+```
+  REACT_APP_GOOGLE_API_KEY = "Secret"
+  REACT_APP_API_ENDPOINT= "http://localhost:3001"
+```
+and then run
+```
+$ npm i && npm audit fix 
+$ npm start (the app will run locally on port 3000 by default)
+```
+please 
+Clone back-end repository, acquire a JWT secret and store it in config/application.yml and then run the command below in terminal
+```
+$ bundle install
+$ rails db:create (for creating your PostgreSQL Database on your local computer)
+$ rails db:migrate 
+$ rails db:seed
+$ rails s -p 3001
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Contributing
+
+Contributions are welcome, submit a pull request!
+
+## Author
+
+* **Ronak Soni** - [GitHub](https://github.com/ronakvsoni)
+                 - [Linkedin](https://www.linkedin.com/in/ronak-soni-738bb4172/)
+
+
+## License
+
+This project is licensed under the [GNU GPL](https://www.gnu.org/licenses/gpl-3.0.en.html)
